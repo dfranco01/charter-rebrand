@@ -8,7 +8,8 @@ This website establishes our mission statement, who we are, and opens invitation
 3. Install virtual environment for Mac: python3 -m venv venv
 4. Activate it: source venv/Scripts/Activate (should see a green venv tag on the CLI)
 4. install dependencies: pip install -r requirements.txt
-5. Run http://127.0.0.1:5000 in your browser 
+5. Run the website: flask --app app.py run --debug
+6. Open http://127.0.0.1:5000 in your browser 
 
 ## Technologies 🛠️
 HTML, CSS, Vanilla JavaScript, Python, Flask
