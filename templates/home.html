@@ -6,23 +6,54 @@
     <title>HOME</title>
 </head>
 <body>
-    <nav>
-        contracting
-    </nav>
-    <header></header>
+    <div style="background-color: aqua;">
+        <a href="/templates/home.html" data-animation-role="header-element">
+                <img elementtiming="nbf-header-logo-desktop"
+                src="//images.squarespace-cdn.com/content/v1/69acd2370f16472c8d794c57/7208b94e-3198-4a49-86fc-837c202d2fb1/Red+Black+and+White+Illustrated+Knight+Logo.png?format=1500w"
+                style="display:block" fetchpriority="high" loading="eager"
+                decoding="async"  width="50" height="50">
+        </a>
+        <a href="/templates/home.html">HOME</a>
+        <a href="/templates/studio.html">SOFTWARE STUDIO</a>
+    </div>
     <div>
+        <img
+                src="https://images.squarespace-cdn.com/content/v1/69acd2370f16472c8d794c57/1772933869022-D1GS0SR9GLZSRV9A9KWF/unsplash-image-Q1p7bh3SHj8.jpg"
+                width="2500" height="1300" sizes="(max-width: 799px) 200vw, 100vw"
+                style="display:block;object-position: 50% 50%"
+                fetchpriority="high" loading="eager" decoding="async">
         <h1>CONTRACTING & SOFTWARE SOLUTIONS BY AMERICAN VETERANS</h1>
         <h2>ABOUT US</h2>
         <p>Peak Veteran was founded by two American veterans who believe that service doesn't end with a uniform. After transitioning from the military, we built Peak Veteranto continue protecting and supporting our nation through professional, dependable contracting services. Our company is rooted in integrity, discipline, and mission-first thinking—values forged through years of military service.
             We exist to deliver excellence, build trust, and serve with purpose.</p>
     </div>
     <div>
-        <h2>Contact Us</h2>
-        <form></form>
+        <h2 style="color: brown;">Contact Us for Inquiry</h2>
+        <form>
+            <input type="text" id="fname" name="first_name">
+            <label for="fname">First Name</label>
+            <input type="text" id="lname" name="last_name">
+            <label for="lname">Last Name</label>
+            <input type="text" id="email" name="email">
+            <label for="email">Email</label>
+            <input type="text" id="phone" name="phone">
+            <label for="phone">Phone</label>
+            <input type="text" id="desc" name="desc">
+            <label for="desc">Description</label>
+        </form>
+    </div>
+    <div>
+        <h3>Stay up</h3>
+        <p>Recieve important updates about relevant information</p>
+        <input type="text" id="signup">
+        <label for="signup">Email</label>
+        <button type="submit">Sign up!</button>
     </div>
     <footer>
-        <div>STAY UP</div>
-        <p>Recieve important updates about relevant information</p>
+        <h3>REACH OUT</h3>
+        <p>charterdomain@gmail.com
+            5900 Balcones Dr Ste 100, Austin, TX, 78731
+        </p>
     </footer>
 </body>
 </html>
