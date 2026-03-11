@@ -47,17 +47,24 @@
             <p>Ready to support your mission. Contact Peak Veteran today to discuss your needs</p>
         </div>
         <div id="form">
-            <form method="post">
+            <form method="post" action="/" enctype="multipart/form-data">
+                <!--<label for="fname">First Name<span> (required)</span></label>
                 <input type="text" id="fname" name="first_name" required>
-                <label for="fname">First Name</label>
+                <label for="lname">Last Name<span> (required)</span></label>
                 <input type="text" id="lname" name="last_name" required>
-                <label for="lname">Last Name</label>
+                <label for="email">Email<span> (required)</span></label>
                 <input type="text" id="email" name="email" required>
-                <label for="email">Email</label>
+                <label for="phone">Phone<span> (required)</span></label>
                 <input type="text" id="phone" name="phone" required>
-                <label for="phone">Phone</label>
-                <input type="text" id="desc" name="desc">
                 <label for="desc">Description</label>
+                <input type="text" id="desc" name="desc">-->
+                {{form.csrf_token}}
+                <p>{{form.first_name.label}} {{form.first_name()}}</p>
+                <p>{{form.last_name.label}} {{form.last_name()}}</p>
+                <p>{{form.email.label}} {{form.email()}}</p>
+                <p>{{form.phone.label}} {{form.phone()}}</p>
+                <p>{{form.desc.label}} {{form.desc()}}</p>
+                <button type="submit">SUBMIT</button>
             </form>
         </div>
     </div>

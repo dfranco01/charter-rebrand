@@ -64,3 +64,12 @@ h2{
 #form-container, #about-container, #footer{
     position: relative;
 }
+
+input{
+    margin: 10px;
+    padding: 8px;
+}
+
+button{
+    border-radius: 5px;
+}
