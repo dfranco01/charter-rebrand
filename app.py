@@ -2,9 +2,18 @@ from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField
 from wtforms.validators import InputRequired
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+#database_url = os.getenv('db_url')
+secret_key = os.getenv('SECRET_KEY')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'key'
+app.config['SECRET_KEY'] = secret_key
+
+
 
 class CustomerForm(FlaskForm):
     first_name = StringField('first_name', validators=[InputRequired()])
