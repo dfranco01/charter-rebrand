@@ -27,7 +27,7 @@ class Customer(db.Model):
 def home():
     return render_template('home.html')
 
-@app.route('/services-1')
+@app.route('/studio')
 def services():
     return render_template('studio.html')
 
