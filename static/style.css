@@ -29,7 +29,7 @@ a{
     color:white
 }
 
-#title{
+.title{
     position: absolute;
     left: 20px;
     bottom: 30%;
