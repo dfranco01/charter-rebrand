@@ -1,4 +1,4 @@
 .venv
 .env
+charter.db
 instance
-business.db

@@ -1,11 +1,52 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, url_for, redirect, request
+from dotenv import load_dotenv
+import os
+from flask_sqlalchemy import SQLAlchemy
+
+load_dotenv()
+
+database_url = os.getenv('DB_URL')
+secret_key = os.getenv('SECRET_KEY')
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = secret_key
+app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{database_url}"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+#db.init_app(app)
+
+class Customer(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    first_name = db.Column(db.String(20), nullable = False)
+    last_name = db.Column(db.String(20), nullable = False)
+    phone = db.Column(db.String(20), nullable = False)
+    email = db.Column(db.String(20), nullable = False)
+    desc = db.Column(db.String(20), nullable = True)
 
 @app.route('/')
-def hello():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 @app.route('/services-1')
 def services():
-    return "service"
+    return render_template('studio.html')
+
+@app.route('/thankyou')
+def thx():
+    return render_template('thanks.html')
+
+@app.route('/inquiry', methods = ['POST'])
+def inquiry():
+    f_first_name = request.form.get('first_name')
+    f_last_name = request.form.get('last_name')
+    f_email = request.form.get('email')
+    f_phone = request.form.get('phone')
+    f_desc = request.form.get('desc')
+    customer = Customer(first_name = f_first_name, last_name=f_last_name, email=f_email, phone=f_phone, desc=f_desc)
+    db.session.add(customer)
+    db.session.commit()
+    return redirect(url_for('thx'))
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
