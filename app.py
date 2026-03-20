@@ -5,23 +5,25 @@ from flask_sqlalchemy import SQLAlchemy
 
 load_dotenv()
 
-database_url = os.getenv('DB_URL')
+#database_url = os.getenv('DB_URL')
 secret_key = os.getenv('SECRET_KEY')
+password = os.getenv("PASSWORD")
+port = os.getenv("PORT")
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secret_key
-app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{database_url}"
+app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://root:{password}@localhost:{port}/charter"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #db.init_app(app)
 
-class Customer(db.Model):
+class Customers(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     first_name = db.Column(db.String(20), nullable = False)
     last_name = db.Column(db.String(20), nullable = False)
     phone = db.Column(db.String(20), nullable = False)
     email = db.Column(db.String(20), nullable = False)
-    desc = db.Column(db.String(20), nullable = True)
+    inquiry = db.Column(db.String(20), nullable = False)
 
 @app.route('/')
 def home():
@@ -41,8 +43,8 @@ def inquiry():
     f_last_name = request.form.get('last_name')
     f_email = request.form.get('email')
     f_phone = request.form.get('phone')
-    f_desc = request.form.get('desc')
-    customer = Customer(first_name = f_first_name, last_name=f_last_name, email=f_email, phone=f_phone, desc=f_desc)
+    f_inquiry = request.form.get('desc')
+    customer = Customers(first_name = f_first_name, last_name=f_last_name, email=f_email, phone=f_phone, inquiry=f_inquiry)
     db.session.add(customer)
     db.session.commit()
     return redirect(url_for('thx'))

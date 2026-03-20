@@ -20,6 +20,3 @@ HTML, CSS, Vanilla JavaScript, Python, Flask
 - going to create a secure admin page for us where we'll be able to see user inquiries
 - email newsletter functionality
 - detail the studio page with future projects
-
-## Demo 📷
-- (Pending)
