@@ -5,7 +5,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 load_dotenv()
 
-#database_url = os.getenv('DB_URL')
 secret_key = os.getenv('SECRET_KEY')
 password = os.getenv("PASSWORD")
 port = os.getenv("PORT")
