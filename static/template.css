@@ -8,6 +8,10 @@
   gap: 20px;
 }
 
+div, span{
+  border: 1px solid green;
+}
+
 /* Mobile first */
 .container > * {
   border: 1px solid green;
@@ -15,7 +19,7 @@
   grid-column: col-start / span 12;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .content{
     grid-column: col-start / span 12;
   }
@@ -29,6 +33,7 @@
     position: absolute;
     top: 50%;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -49,6 +54,30 @@
     position: absolute;
     top: 50%;
   }
+
+  #contact-section{
+    display: flex;
+  }
+
+  #contact-us{
+    width:50%;
+  }
+
+  #fillable{
+    width: 50%;
+  }
+
+  #about{
+    width: 50%;
+  }
+
+  #statement{
+    width: 50%;
+  }
+
+  #about-section{
+    display: flex;
+  }
 }
 
 #planet{
@@ -64,6 +93,7 @@ a{
     text-decoration: none;
     color:white;
     margin-left: 5%;
+    padding-bottom: 5%;
 }
 
 h1{
@@ -72,4 +102,33 @@ h1{
     font-size:xx-large;
 }
 
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size:xx-large;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size:x-large;
+  line-height: 1.8;
+}
+
+input{
+  margin:5%;
+  width: 75%;
+  padding:1%;
+}
+
+button{
+  border-radius: 25%;
+  background-color:cadetblue;
+  color: white;
+  padding: 1% 5% 1% 5%;
+}
+
+button:hover{
+  background-color: aqua;
+}
 
