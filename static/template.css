@@ -8,13 +8,13 @@
   gap: 20px;
 }
 
-div, span{
+/*div, span{
   border: 1px solid green;
-}
+}*/
 
 /* Mobile first */
 .container > * {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   padding: 10px;
   grid-column: col-start / span 12;
 }
@@ -47,12 +47,12 @@ div, span{
 
   #contract{
     position: absolute;
-    top: 30%;
+    top: 40%;
   }
 
   #vet{
     position: absolute;
-    top: 50%;
+    top: 60%;
   }
 
   #contact-section{
@@ -97,21 +97,22 @@ a{
 }
 
 h1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Impact', sans-serif;
     font-weight: 800;
-    font-size:xx-large;
+    font-size:5rem;
+    transform: scaleY(1.5);
 }
 
 h2{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'Impact', sans-serif;
+  font-weight: 500;
   font-size:xx-large;
 }
 
 p{
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size:x-large;
+  font-weight: 100;
+  font-size:large;
   line-height: 1.8;
 }
 
@@ -122,13 +123,16 @@ input{
 }
 
 button{
-  border-radius: 25%;
-  background-color:cadetblue;
+  background-color:rgb(42, 45, 46);
   color: white;
   padding: 1% 5% 1% 5%;
 }
 
 button:hover{
-  background-color: aqua;
+  background-color:black;
 }
 
+.field{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*@import url('https://fonts.googleapis.com/css2?');*/

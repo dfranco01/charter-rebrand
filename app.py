@@ -28,9 +28,9 @@ class Customers(db.Model):
 def home():
     return render_template('home.html')
 
-@app.route('/studio')
-def services():
-    return render_template('studio.html')
+#@app.route('/studio')
+#def services():
+#    return render_template('studio.html')
 
 @app.route('/thankyou')
 def thx():

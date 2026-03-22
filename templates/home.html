@@ -3,65 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link href="../static/home_style.css" rel="stylesheet">
-    <script src="../static/script.js"></script>
+    <title>Template</title>
+    <link rel="stylesheet" href="../static/template.css">
 </head>
 <body>
-    <div class="header">
-        <ul>
-            <li><a href="/">
-                <img width="50" height="50" src="//images.squarespace-cdn.com/content/v1/69acd2370f16472c8d794c57/7208b94e-3198-4a49-86fc-837c202d2fb1/Red+Black+and+White+Illustrated+Knight+Logo.png?format=1500w">
-            </a></li>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/studio">SOFTWARE STUDIO</a></li>
-        </ul>
+    <div class="container">
+        <header class="head" style="overflow: hidden;">
+            <div style="display: flex;">
+                <img style="margin: 1% 1% 1% 3%;" width="50" height="50" src="//images.squarespace-cdn.com/content/v1/69acd2370f16472c8d794c57/7208b94e-3198-4a49-86fc-837c202d2fb1/Red+Black+and+White+Illustrated+Knight+Logo.png?format=1500w">
+                <!--<a href="template.html">CONTRACTING</a>-->
+            </div>
+            <img id="planet"src="https://images.squarespace-cdn.com/content/v1/69acd2370f16472c8d794c57/1772933869022-D1GS0SR9GLZSRV9A9KWF/unsplash-image-Q1p7bh3SHj8.jpg">
+            <h1 id="contract" style="margin-left: 3%;">CONTRACTING & SOFTWARE SOLUTIONS</h1>
+            <h1 id="vet" style="margin-left: 3%;">BY AMERICAN VETERANS</h1>
+        </header>
+        <!--<nav class="nav">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </nav>-->
+        <div class="content">
+            <!--<h1>Content area</h1>
+            <p>Here we display the sections in source order for screens less than 576 pixels wide.</p>
+            <p>Then, we go to a two column layout for screens between 576 and 767 pixels wide.</p>
+            <p>Then, we go to a three column layout for screens over 767 pixels wide.</p>
+            <p>Resize the browser window to see the responsive effect.</p>-->
+            <div id="about-section">
+                <div id="about"><h2 style="color: white;">ABOUT US & OUR BUSINESS</h2></div>
+                <div id="statement"><p>Charter Domain was founded by two American veterans who believe that service doesn't end with a uniform. After transitioning from the military, we built Charter Domain to continue protecting and supporting our nation through professional, dependable contracting services. Our company is rooted in integrity, discipline, and mission-first thinking—values forged through years of military service.
+                We exist to deliver excellence, build trust, and serve with purpose.</p></div>
+            </div>
+            <div id="contact-section"> 
+                <div id="contact-us">
+                    <h2>CONTACT US</h2>
+                    <p>Ready to support your mission. Contact Charter Domain today to discuss your needs</p>
+                </div>
+                <div id="fillable">
+                    <form method="post" action="/inquiry" enctype="multipart/form-data">
+                        <div>
+                            <div><label for="fname"><span class="field">First Name (required)</span></label></div>
+                            <input type="text" id="fname" name="first_name" placeholder="First Name" required>
+                        <div>
+                            <div><label for="lname"><span class="field">Last Name (required)</span></label></div>
+                            <input type="text" id="lname" name="last_name" placeholder="Last Name" required>
+                        </div>
+                        <div>
+                            <div><label for="email"><span class="field">Email (required)</span></label></div>
+                            <input type="text" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div>
+                            <div><label for="phone"><span class="field">Phone (required)</span></label></div>
+                            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div>
+                            <div><label for="desc"><span class="field">Description</span></label></div>
+                            <input type="text" id="desc" name="desc" placeholder="inquiry Description">
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <button type="submit" id="submit"><strong>SUBMIT</strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div>
+                <h2>REACH OUT</h2>
+                <p>charterdomain@gmail.com</p>
+                <p>5900 Balcones Dr Ste 100, Austin, TX, 78731</p>
+            </div>
+            <span style="float: right;"><h2>CHARTER DOMAIN</h2></span>
+        </footer>
     </div>
-    <div id="image">
-        <img id="planet" src="https://images.squarespace-cdn.com/content/v1/69acd2370f16472c8d794c57/1772933869022-D1GS0SR9GLZSRV9A9KWF/unsplash-image-Q1p7bh3SHj8.jpg">
-        <div class="title">
-            <h1>CONTRACTING & SOFTWARE SOLUTIONS</h1> 
-            <h1>BY AMERICAN VETERANS</h1>
-        </div>
-    </div>
-    <div id="about">
-        <div>
-            <h2 style="color: white;">ABOUT US</h2>
-        </div>
-        <div id="statement">
-            <p>Charter Domain was founded by two American veterans who believe that service doesn't end with a uniform. After transitioning from the military, we built Peak Veteranto continue protecting and supporting our nation through professional, dependable contracting services. Our company is rooted in integrity, discipline, and mission-first thinking—values forged through years of military service.
-            We exist to deliver excellence, build trust, and serve with purpose.</p>
-        </div>
-    </div>
-    <div id="inquiry">
-        <div id="contact">
-            <h2>CONTACT US</h2>
-            <p>Ready to support your mission. Contact Charter Domain today to discuss your needs</p>
-        </div>
-        <form method="post" action="/inquiry" enctype="multipart/form-data">
-            <label for="fname">First Name<span> (required)</span></label>
-            <input type="text" id="fname" name="first_name" placeholder="First Name" required>
-            <label for="lname">Last Name<span> (required)</span></label>
-            <input type="text" id="lname" name="last_name" placeholder="Last Name" required>
-            <label for="email">Email<span> (required)</span></label>
-            <input type="text" id="email" name="email" placeholder="Email" required>
-            <label for="phone">Phone<span> (required)</span></label>
-            <input type="text" id="phone" name="phone" placeholder="Phone" required>
-            <label for="desc">Description</label>
-            <input type="text" id="desc" name="desc" placeholder="inquiry Description">
-            <button type="submit" id="submit">SUBMIT</button>
-        </form>
-    </div>
-    <footer id="closing">
-        <div id="footer-contact">
-            <h2>REACH OUT</h2>
-            <p>charterdomain@gmail.com
-            5900 Balcones Dr Ste 100, Austin, TX, 78731
-            </p>
-        </div>
-        <div id="charter">
-            <h2>CHARTER DOMAIN</h2>
-        </div>
-    </footer>
 </body>
 </html>
