@@ -7,7 +7,7 @@ This website establishes our mission statement, who we are, and opens invitation
 2. Install virtual environment for Mac: python3 -m venv venv
 3. Activate it: source venv/Bin/Activate (should see a green venv tag on the CLI)
 4. install dependencies: pip install -r requirements.txt
-5. Run the website: python app.py
+5. Run the website: python3 app.py
 6. Open http://127.0.0.1:5000 in your browser 
 
 ## Technologies 🛠️
