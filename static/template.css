@@ -29,9 +29,17 @@
     top: 10%;
   }
 
-  #vet{
-    position: absolute;
-    top: 50%;
+  h1{
+    font-family: 'Impact', sans-serif;
+    font-weight: 800;
+    font-size:2.5rem;
+    /*transform: scaleY(1.5);*/
+  }
+
+  .head{
+    background-image: url('planet.png');
+    background-size: cover;
+    height: 50vh;
   }
 
 }
@@ -45,18 +53,9 @@
     grid-column: col-start / span 12;
   }
 
-  #contract{
-    position: absolute;
-    top: 40%;
-  }
-
-  #vet{
-    position: absolute;
-    top: 60%;
-  }
-
   #contact-section{
     display: flex;
+    align-items: flex-start;
   }
 
   #contact-us{
@@ -65,6 +64,7 @@
 
   #fillable{
     width: 50%;
+    margin-top: 6.5%;
   }
 
   #about{
@@ -77,6 +77,20 @@
 
   #about-section{
     display: flex;
+  }
+
+  h1{
+    padding-top: 10%;
+    font-family: 'Impact', sans-serif;
+    font-weight: 800;
+    font-size:5rem;
+    transform: scaleY(1.5);
+  }
+
+  .head{
+    background-image: url('planet.png');
+    background-size: cover;
+    height: 100vh;
   }
 }
 
@@ -96,13 +110,6 @@ a{
     padding-bottom: 5%;
 }
 
-h1{
-    font-family: 'Impact', sans-serif;
-    font-weight: 800;
-    font-size:5rem;
-    transform: scaleY(1.5);
-}
-
 h2{
   font-family: 'Impact', sans-serif;
   font-weight: 500;
@@ -117,7 +124,7 @@ p{
 }
 
 input{
-  margin:5%;
+  margin-bottom:5%;
   width: 75%;
   padding:1%;
 }
@@ -135,4 +142,5 @@ button:hover{
 .field{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-/*@import url('https://fonts.googleapis.com/css2?');*/
+
+
