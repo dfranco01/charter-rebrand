@@ -1,3 +1,0 @@
-- have the form align with "Ready.."
-- have the labels inline with the input elements and closer
-- fix the header section on mobile
