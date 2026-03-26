@@ -8,10 +8,12 @@ load_dotenv()
 secret_key = os.getenv('SECRET_KEY')
 password = os.getenv("PASSWORD")
 port = os.getenv("PORT")
+url = os.getenv("DB_URI")
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secret_key
-app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://root:{password}@localhost:{port}/charter"
+#app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://root:{password}@localhost:{port}/charter"
+app.config['SQLALCHEMY_DATABASE_URI'] = url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #db.init_app(app)
