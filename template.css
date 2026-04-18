@@ -30,11 +30,10 @@
     font-weight: 800;
     font-size:2.5rem;
     padding-top: 15%;
-    /*transform: scaleY(1.5);*/
   }
 
   .head{
-    background-image: url('planet.png');
+    background-image: url('images/planet.png');
     background-size: cover;
     height: 50vh;
   }
@@ -87,7 +86,7 @@
   }
 
   .head{
-    background-image: url('planet.png');
+    background-image: url('images/planet.png');
     background-size: cover;
     height: 100vh;
   }
