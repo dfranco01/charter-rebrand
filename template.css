@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: black;
+}
+
+h1, h2, p, label, button{
+  color: white;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -10,7 +18,6 @@
 
 /* Mobile first */
 .container > * {
-  /*border: 1px solid green;*/
   padding: 10px;
   grid-column: col-start / span 12;
 }
@@ -45,7 +52,7 @@
     grid-column: col-start / span 12;
     grid-row: 2 / 4;
   }
-  .footer {
+  .footer, .proof {
     grid-column: col-start / span 12;
   }
 
@@ -94,7 +101,7 @@
     margin-left: 6%;
   }
 
-  #reach, .info{
+  .reach, .info{
     margin-left: 3%;
   }
 
@@ -105,15 +112,19 @@
     max-width: 100%;
 }
 
-.head, .footer{
+.head, .footer, .proof{
     position: relative;
 }
 
 a{
-    text-decoration: none;
+    text-decoration:none;
     color:white;
     margin-left: 5%;
     padding-bottom: 5%;
+}
+
+a:hover{
+  color:red;
 }
 
 h2{
@@ -148,5 +159,16 @@ button:hover{
 .field{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+li{
+  list-style-type: none;
+  padding-right: 10%;
+}
+
+nav{
+  position: relative;
+  z-index:10;
+}
+
 
 
